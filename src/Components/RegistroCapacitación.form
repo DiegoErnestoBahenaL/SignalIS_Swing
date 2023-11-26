@@ -70,28 +70,28 @@
         </constraints>
         <properties/>
       </component>
-      <component id="48b93" class="javax.swing.JCheckBox" binding="opcion1CheckBox" custom-create="true" default-binding="true">
+      <component id="48b93" class="javax.swing.JCheckBox" binding="opción1CheckBox" custom-create="true" default-binding="true">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Opcion 1"/>
+          <text value="Opción 1"/>
         </properties>
       </component>
-      <component id="e2a5e" class="javax.swing.JCheckBox" binding="opcion2CheckBox" default-binding="true">
+      <component id="e2a5e" class="javax.swing.JCheckBox" binding="opción2CheckBox" default-binding="true">
         <constraints>
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Opcion 2"/>
+          <text value="Opción 2"/>
         </properties>
       </component>
-      <component id="88141" class="javax.swing.JCheckBox" binding="opcion3CheckBox" default-binding="true">
+      <component id="88141" class="javax.swing.JCheckBox" binding="opción3CheckBox" default-binding="true">
         <constraints>
           <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Opcion 3"/>
+          <text value="Opción 3"/>
         </properties>
       </component>
       <component id="5999f" class="javax.swing.JLabel">
@@ -102,28 +102,28 @@
           <text value="Alumnos"/>
         </properties>
       </component>
-      <component id="53e46" class="javax.swing.JCheckBox" binding="opcion1CheckBox1" default-binding="true">
+      <component id="53e46" class="javax.swing.JCheckBox" binding="opción1CheckBox1" default-binding="true">
         <constraints>
           <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Opcion 1"/>
+          <text value="Opción 1"/>
         </properties>
       </component>
-      <component id="ca65f" class="javax.swing.JCheckBox" binding="opcion2CheckBox1" default-binding="true">
+      <component id="ca65f" class="javax.swing.JCheckBox" binding="opción2CheckBox1" default-binding="true">
         <constraints>
           <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Opcion 2"/>
+          <text value="Opción 2"/>
         </properties>
       </component>
-      <component id="d1c96" class="javax.swing.JCheckBox" binding="opcion3CheckBox1" default-binding="true">
+      <component id="d1c96" class="javax.swing.JCheckBox" binding="opción3CheckBox1" default-binding="true">
         <constraints>
           <grid row="10" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Opcion 3"/>
+          <text value="Opción 3"/>
         </properties>
       </component>
       <component id="c56a9" class="javax.swing.JLabel">
