@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="17e18" class="javax.swing.JLabel">
+      <component id="17e18" class="javax.swing.JLabel" binding="titulo">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -24,7 +24,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="7f71a" class="javax.swing.JLabel">
+      <component id="7f71a" class="javax.swing.JLabel" binding="sub3">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -72,7 +72,7 @@
           <text value="Registrar"/>
         </properties>
       </component>
-      <component id="5c9d3" class="javax.swing.JLabel">
+      <component id="5c9d3" class="javax.swing.JLabel" binding="sub1">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -104,7 +104,7 @@
           <text value="Opción 1"/>
         </properties>
       </component>
-      <component id="5af69" class="javax.swing.JLabel">
+      <component id="5af69" class="javax.swing.JLabel" binding="sub4">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -118,7 +118,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="36fea" class="javax.swing.JLabel">
+      <component id="36fea" class="javax.swing.JLabel" binding="sub2">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>

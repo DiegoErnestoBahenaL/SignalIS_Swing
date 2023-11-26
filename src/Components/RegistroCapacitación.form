@@ -8,7 +8,7 @@
     <properties/>
     <border type="none"/>
     <children>
-      <component id="741ac" class="javax.swing.JLabel">
+      <component id="741ac" class="javax.swing.JLabel" binding="titulo">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -16,7 +16,7 @@
           <text value="Registrar Capacitación"/>
         </properties>
       </component>
-      <component id="6b408" class="javax.swing.JLabel">
+      <component id="6b408" class="javax.swing.JLabel" binding="sub1">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -24,7 +24,7 @@
           <text value="Fecha de Inicio"/>
         </properties>
       </component>
-      <component id="fdc68" class="javax.swing.JLabel">
+      <component id="fdc68" class="javax.swing.JLabel" binding="sub2">
         <constraints>
           <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -48,7 +48,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="52765" class="javax.swing.JLabel">
+      <component id="52765" class="javax.swing.JLabel" binding="sub3">
         <constraints>
           <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -56,7 +56,7 @@
           <text value="Capacidad"/>
         </properties>
       </component>
-      <component id="280f8" class="javax.swing.JLabel">
+      <component id="280f8" class="javax.swing.JLabel" binding="sub4">
         <constraints>
           <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -70,7 +70,7 @@
         </constraints>
         <properties/>
       </component>
-      <component id="48b93" class="javax.swing.JCheckBox" binding="opción1CheckBox" custom-create="true" default-binding="true">
+      <component id="48b93" class="javax.swing.JCheckBox" binding="opción1CheckBox" default-binding="true">
         <constraints>
           <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -94,7 +94,7 @@
           <text value="Opción 3"/>
         </properties>
       </component>
-      <component id="5999f" class="javax.swing.JLabel">
+      <component id="5999f" class="javax.swing.JLabel" binding="sub5">
         <constraints>
           <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
@@ -126,7 +126,7 @@
           <text value="Opción 3"/>
         </properties>
       </component>
-      <component id="c56a9" class="javax.swing.JLabel">
+      <component id="c56a9" class="javax.swing.JLabel" binding="sub6">
         <constraints>
           <grid row="11" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
