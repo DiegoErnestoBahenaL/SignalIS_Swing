@@ -13,9 +13,9 @@ public class Mostrar_Capacitacion {
     private JRadioButton radioButton4;
     private JRadioButton radioButton5;
     private JRadioButton radioButton6;
-    private JButton button1;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
+    private JButton regresarButton;
+    private JButton guardarButton;
+    private JButton eliminarButton;
+    private JButton anteriorButton;
+    private JButton siguienteButton;
 }

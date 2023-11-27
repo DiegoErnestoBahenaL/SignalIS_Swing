@@ -3,11 +3,11 @@ package Components;
 import javax.swing.*;
 
 public class Mostrar_Curso {
-    private JButton button1;
-    private JButton button2;
-    private JButton button3;
-    private JButton button4;
-    private JButton button5;
+    private JButton regresarButton;
+    private JButton guardarButton;
+    private JButton anteriorButton;
+    private JButton eliminarButton;
+    private JButton siguienteButton;
     private JTextArea textArea1;
     private JSpinner spinner1;
     private JComboBox comboBox1;
