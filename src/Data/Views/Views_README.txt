@@ -1,1 +1,0 @@
-View classes for the entities.

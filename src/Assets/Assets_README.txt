@@ -1,1 +1,0 @@
-In this directory resources like images are stored.

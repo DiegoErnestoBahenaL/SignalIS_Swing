@@ -1,5 +1,7 @@
 package Data.DataStructures;
 
+import java.lang.reflect.Field;
+
 public class List <T> {
     public Node<T> Beginning;
     public int Count;
@@ -161,5 +163,33 @@ public class List <T> {
             position++;
         }
         return -1;
+    }
+
+    public T findById(long id) throws Exception{
+        Node<T> temp;
+
+        if (isEmpty()){
+            throw  new Exception("List is empty");
+        }
+
+        temp = Beginning;
+        int position = 0;
+        while (temp != null){
+
+            Object data = (Object) temp.getData();
+
+            Field idField = data.getClass().getDeclaredField("Id");
+
+            idField.setAccessible(true);
+
+            long idValue = (long)idField.get(data);
+
+            if ( idValue == id){
+                return temp.getData();
+            }
+            temp = temp.getNext();
+            position++;
+        }
+        throw new Exception("Element not found");
     }
 }
