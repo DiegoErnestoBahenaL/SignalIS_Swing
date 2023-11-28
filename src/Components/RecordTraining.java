@@ -26,7 +26,7 @@ public class RecordTraining extends JFrame{
     private JLabel sub6;
 
     public RecordTraining(){
-        this.setSize(500, 300);
+        this.setSize(500, 500);
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Registro de Capacitación");
