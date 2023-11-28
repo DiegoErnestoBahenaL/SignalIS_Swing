@@ -2,7 +2,7 @@ package Components;
 
 import javax.swing.*;
 
-public class Mostrar_Certificado {
+public class ShowCertificate {
     private JButton regresarButton;
     private JButton eliminarButton;
     private JButton editarButton;

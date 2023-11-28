@@ -2,7 +2,7 @@ package Components;
 
 import javax.swing.*;
 
-public class Mostrar_Curso {
+public class ShowCourse {
     private JButton regresarButton;
     private JButton guardarButton;
     private JButton anteriorButton;

@@ -3,25 +3,30 @@ package Components;
 import javax.swing.*;
 import java.awt.*;
 
-public class RegistroCertificado extends JFrame{
+public class RecordFoundation extends JFrame{
     private JPanel panel1;
+    private JTextField textField1;
+    private JSpinner spinner1;
+    private JCheckBox opción1CheckBox;
+    private JCheckBox opción2CheckBox;
+    private JCheckBox opción3CheckBox;
+    private JCheckBox opción1CheckBox1;
+    private JCheckBox opción2CheckBox1;
+    private JCheckBox opción3CheckBox1;
     private JButton regresarButton;
     private JButton registrarButton;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
-    private JComboBox comboBox3;
-    private JTextField textField1;
     private JLabel titulo;
     private JLabel sub1;
     private JLabel sub2;
     private JLabel sub3;
     private JLabel sub4;
 
-    public RegistroCertificado(){
+    public RecordFoundation(){
+
         this.setSize(500, 300);
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.setTitle("Registro de Certificado");
+        this.setTitle("Registro de Fundación");
         this.setVisible(true);
 
         String general_font = "Font";
@@ -33,10 +38,11 @@ public class RegistroCertificado extends JFrame{
         this.sub2.setFont(subtitle_font);
         this.sub3.setFont(subtitle_font);
         this.sub4.setFont(subtitle_font);
+
     }
+
 
     public static void main(String[] args) {
-        RegistroCertificado window = new RegistroCertificado();
+        RecordFoundation window = new RecordFoundation();
     }
-
 }

@@ -2,7 +2,7 @@ package Components;
 
 import javax.swing.*;
 
-public class Mostrar_Fundacion {
+public class ShowFoundation {
     private JTextField textField1;
     private JSpinner spinner1;
     private JRadioButton radioButton1;
