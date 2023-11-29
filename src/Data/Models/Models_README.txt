@@ -1,1 +1,0 @@
-This directory stores the models (entities) of the project.
