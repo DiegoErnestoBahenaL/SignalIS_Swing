@@ -10,12 +10,12 @@ public class ShowTraining {
     private JTextArea textArea1;
     private JRadioButton radioButton2;
     private JRadioButton radioButton3;
-    private JRadioButton radioButton4;
-    private JRadioButton radioButton5;
-    private JRadioButton radioButton6;
     private JButton regresarButton;
     private JButton guardarButton;
     private JButton eliminarButton;
     private JButton anteriorButton;
     private JButton siguienteButton;
+    private JCheckBox checkBox1;
+    private JCheckBox checkBox2;
+    private JCheckBox checkBox3;
 }

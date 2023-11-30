@@ -89,30 +89,6 @@
           <text value="Alumnos"/>
         </properties>
       </component>
-      <component id="38a5" class="javax.swing.JRadioButton" binding="radioButton4" default-binding="true">
-        <constraints>
-          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="RadioButton"/>
-        </properties>
-      </component>
-      <component id="4fbc7" class="javax.swing.JRadioButton" binding="radioButton5" default-binding="true">
-        <constraints>
-          <grid row="8" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="RadioButton"/>
-        </properties>
-      </component>
-      <component id="20fad" class="javax.swing.JRadioButton" binding="radioButton6" default-binding="true">
-        <constraints>
-          <grid row="9" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="RadioButton"/>
-        </properties>
-      </component>
       <component id="cd06e" class="javax.swing.JButton" binding="regresarButton" default-binding="true">
         <constraints>
           <grid row="12" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -193,6 +169,30 @@
         </constraints>
         <properties>
           <text value="Ubicación"/>
+        </properties>
+      </component>
+      <component id="ee17d" class="javax.swing.JCheckBox" binding="checkBox1" default-binding="true">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="CheckBox"/>
+        </properties>
+      </component>
+      <component id="53df8" class="javax.swing.JCheckBox" binding="checkBox2" default-binding="true">
+        <constraints>
+          <grid row="9" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="CheckBox"/>
+        </properties>
+      </component>
+      <component id="f0745" class="javax.swing.JCheckBox" binding="checkBox3" default-binding="true">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="CheckBox"/>
         </properties>
       </component>
     </children>

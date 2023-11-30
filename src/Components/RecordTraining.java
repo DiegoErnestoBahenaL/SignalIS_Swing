@@ -8,9 +8,6 @@ public class RecordTraining extends JFrame{
     private JTextField textField1;
     private JTextField textField2;
     private JSpinner spinner1;
-    private JCheckBox opción1CheckBox;
-    private JCheckBox opción2CheckBox;
-    private JCheckBox opción3CheckBox;
     private JCheckBox opción1CheckBox1;
     private JCheckBox opción2CheckBox1;
     private JCheckBox opción3CheckBox1;
@@ -24,6 +21,9 @@ public class RecordTraining extends JFrame{
     private JLabel sub4;
     private JLabel sub5;
     private JLabel sub6;
+    private JRadioButton radioButton1;
+    private JRadioButton radioButton2;
+    private JRadioButton radioButton3;
 
     public RecordTraining(){
         this.setSize(500, 500);

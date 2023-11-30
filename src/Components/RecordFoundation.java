@@ -7,9 +7,6 @@ public class RecordFoundation extends JFrame{
     private JPanel panel1;
     private JTextField textField1;
     private JSpinner spinner1;
-    private JCheckBox opción1CheckBox;
-    private JCheckBox opción2CheckBox;
-    private JCheckBox opción3CheckBox;
     private JCheckBox opción1CheckBox1;
     private JCheckBox opción2CheckBox1;
     private JCheckBox opción3CheckBox1;
@@ -20,6 +17,9 @@ public class RecordFoundation extends JFrame{
     private JLabel sub2;
     private JLabel sub3;
     private JLabel sub4;
+    private JRadioButton radioButton1;
+    private JRadioButton radioButton2;
+    private JRadioButton radioButton3;
 
     public RecordFoundation(){
 
