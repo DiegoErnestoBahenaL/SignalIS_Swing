@@ -77,4 +77,6 @@ public class Affiliate {
     public void setUserId(long userId) {
         UserId = userId;
     }
+
+
 }
