@@ -1,20 +1,34 @@
 package Components;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Landing extends JFrame {
     private JPanel panel1;
     private JTable table1;
+    private JLabel title_Landing;
+    private JMenuItem afiliado_add;
+    private JMenu afiliado_option;
+    private JMenuBar menu;
+    private JMenu fundacion_option;
+    private JMenuItem fundacion_add;
+    private JMenuItem fundacion_view;
+    private JMenu curso_option;
+    private JMenuItem curso_add;
+    private JMenuItem curso_view;
+    private JMenu capacitacion_option;
+    private JMenuItem capacitacion_add;
+    private JMenuItem capacitacion_view;
+    private JMenu logout;
+    private JMenu certificado_option;
+    private JMenuItem certificado_add;
+    private JMenuItem certificado_view;
 
     Landing(){
         this.setSize(520, 520);
         this.setVisible(true);
-
-        DesktopPane desktoppane = new DesktopPane();
-        Container pane = getContentPane();
-        pane.add(desktoppane, BorderLayout.CENTER);
-        desktoppane.showDesktopPane(desktoppane);
+        this.getContentPane().setLayout(null);
 
     }
 
@@ -22,20 +36,4 @@ public class Landing extends JFrame {
         Landing window = new Landing();
     }
 
-}
-
-class DesktopPane extends JDesktopPane{
-    int nbre_frames = 1;
-    int x = 0, y = 0;
-
-    public void showDesktopPane(DesktopPane dp){
-        for(int i = 0; i < nbre_frames; i++){
-            JInternalFrame internal_frame = new JInternalFrame("Frame" + i, true, true, true, true);
-            internal_frame.setBounds(x, y, 500, 500);
-
-            dp.add(internal_frame);
-            internal_frame.setVisible(true);
-            y += 100;
-        }
-    }
 }

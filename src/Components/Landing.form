@@ -10,14 +10,14 @@
     </properties>
     <border type="none"/>
     <children>
-      <grid id="9d86" class="javax.swing.JMenuBar" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+      <grid id="9d86" class="javax.swing.JMenuBar" binding="menu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
         <constraints>
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="42eb3" class="javax.swing.JMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="42eb3" class="javax.swing.JMenu" binding="afiliado_option" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints/>
             <properties>
               <popupMenuVisible value="false"/>
@@ -26,7 +26,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="a700" class="javax.swing.JMenuItem">
+              <component id="a700" class="javax.swing.JMenuItem" binding="afiliado_add">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
@@ -34,20 +34,20 @@
               </component>
             </children>
           </grid>
-          <grid id="72e40" class="javax.swing.JMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="72e40" class="javax.swing.JMenu" binding="fundacion_option" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints/>
             <properties>
               <text value="Fundación"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="1b3c7" class="javax.swing.JMenuItem">
+              <component id="1b3c7" class="javax.swing.JMenuItem" binding="fundacion_add">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="94b61" class="javax.swing.JMenuItem">
+              <component id="94b61" class="javax.swing.JMenuItem" binding="fundacion_view">
                 <constraints/>
                 <properties>
                   <text value="Mostrar"/>
@@ -55,20 +55,20 @@
               </component>
             </children>
           </grid>
-          <grid id="ea032" class="javax.swing.JMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="ea032" class="javax.swing.JMenu" binding="curso_option" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints/>
             <properties>
               <text value="Curso"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="3c27d" class="javax.swing.JMenuItem">
+              <component id="3c27d" class="javax.swing.JMenuItem" binding="curso_add">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="94d42" class="javax.swing.JMenuItem">
+              <component id="94d42" class="javax.swing.JMenuItem" binding="curso_view">
                 <constraints/>
                 <properties>
                   <text value="Mostrar"/>
@@ -76,20 +76,20 @@
               </component>
             </children>
           </grid>
-          <grid id="1a020" class="javax.swing.JMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="1a020" class="javax.swing.JMenu" binding="capacitacion_option" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints/>
             <properties>
               <text value="Capacitación"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="10536" class="javax.swing.JMenuItem">
+              <component id="10536" class="javax.swing.JMenuItem" binding="capacitacion_add">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="71d55" class="javax.swing.JMenuItem">
+              <component id="71d55" class="javax.swing.JMenuItem" binding="capacitacion_view">
                 <constraints/>
                 <properties>
                   <text value="Mostrar"/>
@@ -97,41 +97,20 @@
               </component>
             </children>
           </grid>
-          <grid id="5b67d" class="javax.swing.JMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
-            <constraints/>
-            <properties>
-              <text value="Fundación"/>
-            </properties>
-            <border type="none"/>
-            <children>
-              <component id="78e4c" class="javax.swing.JMenuItem">
-                <constraints/>
-                <properties>
-                  <text value="Insertar"/>
-                </properties>
-              </component>
-              <component id="2dc66" class="javax.swing.JMenuItem">
-                <constraints/>
-                <properties>
-                  <text value="Mostrar"/>
-                </properties>
-              </component>
-            </children>
-          </grid>
-          <grid id="ccba9" class="javax.swing.JMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="ccba9" class="javax.swing.JMenu" binding="certificado_option" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints/>
             <properties>
               <text value="Certificado"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="cb432" class="javax.swing.JMenuItem">
+              <component id="cb432" class="javax.swing.JMenuItem" binding="certificado_add">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="aff55" class="javax.swing.JMenuItem">
+              <component id="aff55" class="javax.swing.JMenuItem" binding="certificado_view">
                 <constraints/>
                 <properties>
                   <text value="Mostrar"/>
@@ -139,7 +118,7 @@
               </component>
             </children>
           </grid>
-          <grid id="736b9" class="javax.swing.JMenu" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="736b9" class="javax.swing.JMenu" binding="logout" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints/>
             <properties>
@@ -150,7 +129,7 @@
           </grid>
         </children>
       </grid>
-      <component id="c6174" class="javax.swing.JLabel">
+      <component id="c6174" class="javax.swing.JLabel" binding="title_Landing">
         <constraints>
           <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
