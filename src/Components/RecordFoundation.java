@@ -3,7 +3,7 @@ package Components;
 import javax.swing.*;
 import java.awt.*;
 
-public class RecordFoundation extends JFrame{
+public class RecordFoundation extends JInternalFrame{
     private JPanel panel1;
     private JTextField textField1;
     private JSpinner spinner1;
@@ -23,11 +23,13 @@ public class RecordFoundation extends JFrame{
 
     public RecordFoundation(){
 
-        this.setSize(500, 300);
+        this.setSize(700, 500);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
         this.setTitle("Registro de Fundación");
         this.setVisible(true);
+        this.setClosable(true);
+
 
         String general_font = "Font";
         Font title_font = new Font(general_font, Font.BOLD,  36);
@@ -38,11 +40,5 @@ public class RecordFoundation extends JFrame{
         this.sub2.setFont(subtitle_font);
         this.sub3.setFont(subtitle_font);
         this.sub4.setFont(subtitle_font);
-
-    }
-
-
-    public static void main(String[] args) {
-        RecordFoundation window = new RecordFoundation();
     }
 }

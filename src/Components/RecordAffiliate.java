@@ -3,7 +3,7 @@ package Components;
 import javax.swing.*;
 import java.awt.*;
 
-public class ShowAffiliate extends JFrame{
+public class RecordAffiliate extends JInternalFrame{
     private JPanel panel1;
     private JButton regresarButton;
     private JButton registrarButton;
@@ -20,13 +20,17 @@ public class ShowAffiliate extends JFrame{
     private JLabel sub4;
     private JLabel sub5;
     private JLabel sub6;
-    public ShowAffiliate(){
+
+    public RecordAffiliate(){
         this.setSize(500, 300);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
         this.setTitle("Registro de Curso");
         this.setVisible(true);
+        this.setClosable(true);
+        this.setMaximizable(true);
 
+//-----------------------------------FONTS------------------------------------------------------//
         String general_font = "Font";
         Font title_font = new Font(general_font, Font.BOLD,  36);
         this.titulo.setFont(title_font);
@@ -35,11 +39,10 @@ public class ShowAffiliate extends JFrame{
         this.sub1.setFont(subtitle_font);
         this.sub2.setFont(subtitle_font);
         this.sub3.setFont(subtitle_font);
+        this.sub4.setFont(subtitle_font);
+        this.sub5.setFont(subtitle_font);
+        this.sub6.setFont(subtitle_font);
 
-    }
-
-    public static void main(String[] args) {
-        ShowAffiliate window = new ShowAffiliate();
     }
 }
 
