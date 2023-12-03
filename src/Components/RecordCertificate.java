@@ -3,7 +3,7 @@ package Components;
 import javax.swing.*;
 import java.awt.*;
 
-public class RecordCertificate extends JFrame{
+public class RecordCertificate extends JInternalFrame{
     private JPanel panel1;
     private JButton regresarButton;
     private JButton registrarButton;
@@ -18,11 +18,13 @@ public class RecordCertificate extends JFrame{
     private JLabel sub4;
 
     public RecordCertificate(){
-        this.setSize(500, 300);
+        this.setSize(700, 500);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
         this.setTitle("Registro de Certificado");
         this.setVisible(true);
+        this.setClosable(true);
+
 
         String general_font = "Font";
         Font title_font = new Font(general_font, Font.BOLD,  36);
@@ -34,9 +36,4 @@ public class RecordCertificate extends JFrame{
         this.sub3.setFont(subtitle_font);
         this.sub4.setFont(subtitle_font);
     }
-
-    public static void main(String[] args) {
-        RecordCertificate window = new RecordCertificate();
-    }
-
 }

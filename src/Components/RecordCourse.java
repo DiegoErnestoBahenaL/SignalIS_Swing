@@ -1,9 +1,9 @@
 package Components;
 import java.awt.Font;
-
 import javax.swing.*;
 
-public class RecordCourse extends JFrame{
+
+public class RecordCourse extends JInternalFrame{
     private JPanel panel1;
     private JLabel titulo;
     private JComboBox comboBox1;
@@ -16,11 +16,13 @@ public class RecordCourse extends JFrame{
     private JLabel sub3;
 
     public RecordCourse(){
-        this.setSize(500, 300);
+        this.setSize(700, 500);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
         this.setTitle("Registro de Curso");
         this.setVisible(true);
+        this.setClosable(true);
+
 
         String general_font = "Font";
         Font title_font = new Font(general_font, Font.BOLD,  36);
@@ -31,10 +33,6 @@ public class RecordCourse extends JFrame{
         this.sub2.setFont(subtitle_font);
         this.sub3.setFont(subtitle_font);
 
-    }
-
-    public static void main(String[] args) {
-        RecordCourse window = new RecordCourse();
     }
 
 }

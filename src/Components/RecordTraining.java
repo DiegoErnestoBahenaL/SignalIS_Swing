@@ -3,7 +3,7 @@ package Components;
 import javax.swing.*;
 import java.awt.*;
 
-public class RecordTraining extends JFrame{
+public class RecordTraining extends JInternalFrame{
     private JPanel panel1;
     private JTextField textField1;
     private JTextField textField2;
@@ -26,11 +26,12 @@ public class RecordTraining extends JFrame{
     private JRadioButton radioButton3;
 
     public RecordTraining(){
-        this.setSize(500, 500);
+        this.setSize(500, 300);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
         this.setTitle("Registro de Capacitación");
         this.setVisible(true);
+        this.setClosable(true);
 
         String general_font = "Font";
         Font title_font = new Font(general_font, Font.BOLD,  36);
@@ -45,10 +46,4 @@ public class RecordTraining extends JFrame{
         this.sub6.setFont(subtitle_font);
 
     }
-
-    public static void main(String[] args) {
-        RecordTraining window = new RecordTraining();
-    }
-
-
 }

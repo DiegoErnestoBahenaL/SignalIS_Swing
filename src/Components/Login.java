@@ -13,9 +13,9 @@ public class Login extends JFrame{
     private JLabel lbUsuario;
     private JLabel lbPassword;
 
-    private void createUIComponents() {
+    public Login() {
         // TODO: place custom component creation code here
-        this.setSize(500, 300);
+        this.setSize(700, 700);
         this.setContentPane(panelLogin);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Iniciar Sesión");
