@@ -22,6 +22,7 @@ public class Landing extends JFrame{
     private JMenu CertificateMenu;
     private JMenuItem InsertCertificate;
     private JMenuItem DisplayCertificate;
+    private JMenuItem DisplayAffiliates;
 
     public Landing(){
         initcomponents();
@@ -89,6 +90,13 @@ public class Landing extends JFrame{
                 Desk_Pane.add(show_certificate);
             }
         });
+        DisplayAffiliates.addActionListener((new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                ShowAffiliate show_affiliate = new ShowAffiliate();
+                Desk_Pane.add(show_affiliate);
+            }
+        }));
         this.setContentPane(panel1);
         this.setVisible(true);
     }

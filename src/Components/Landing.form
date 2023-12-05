@@ -32,6 +32,12 @@
                   <text value="Insertar"/>
                 </properties>
               </component>
+              <component id="223da" class="javax.swing.JMenuItem" binding="DisplayAffiliates">
+                <constraints/>
+                <properties>
+                  <text value="Mostrar"/>
+                </properties>
+              </component>
             </children>
           </grid>
           <grid id="72e40" class="javax.swing.JMenu" binding="FoundationMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
