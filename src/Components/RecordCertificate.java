@@ -1,8 +1,12 @@
 package Components;
 
+import Data.DataStructures.Queue;
+import Data.Models.Certificate;
+
 import javax.swing.*;
 import java.awt.*;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 public class RecordCertificate extends JInternalFrame{
     private JPanel panel1;
     private JButton regresarButton;
@@ -16,6 +20,8 @@ public class RecordCertificate extends JInternalFrame{
     private JLabel sub2;
     private JLabel sub3;
     private JLabel sub4;
+
+    public Queue<Certificate> certificateQueue= new Queue<Certificate>();
 
     public RecordCertificate(){
         this.setSize(700, 500);
@@ -35,5 +41,22 @@ public class RecordCertificate extends JInternalFrame{
         this.sub2.setFont(subtitle_font);
         this.sub3.setFont(subtitle_font);
         this.sub4.setFont(subtitle_font);
+        registrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String studentName = comboBox1.getSelectedItem().toString();
+                String teacherName = comboBox2.getSelectedItem().toString();
+                String date = textField1.getText();
+                long trainingId = Long.parseLong(comboBox3.getSelectedItem().toString());
+
+                Certificate newCertificate = new Certificate(0, studentName, teacherName, trainingId, date);
+
+                certificateQueue.push(newCertificate);
+
+                JOptionPane.showMessageDialog(panel1, "Certificado registrado correctamente");
+            }
+        });
     }
+
+
 }
