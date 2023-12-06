@@ -15,9 +15,9 @@ public class RecordCertificate extends JInternalFrame{
     private JPanel panel1;
     private JButton regresarButton;
     private JButton registrarButton;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
-    private JComboBox comboBox3;
+    private JComboBox trainingsComboBox;
+    private JComboBox teachersComboBox;
+    private JComboBox studentsComboBox;
     private JTextField textField1;
     private JLabel titulo;
     private JLabel sub1;
@@ -57,9 +57,9 @@ public class RecordCertificate extends JInternalFrame{
                 namesArray[i] = user.getUserName();
             } catch (Exception ex){}
         }
-        comboBox2.setModel(new DefaultComboBoxModel<>(namesArray));
+        teachersComboBox.setModel(new DefaultComboBoxModel<>(namesArray));
 
-        comboBox3.setModel(new DefaultComboBoxModel<>(namesArray));
+        studentsComboBox.setModel(new DefaultComboBoxModel<>(namesArray));
 
         String[] trainingArray = new String[landing.Trainings.Count];
 
@@ -67,21 +67,24 @@ public class RecordCertificate extends JInternalFrame{
             try{
                 Training training = landing.Trainings.getItemAtIndex(i);
 
-                trainingArray[i] = training.getStartDate();
+                trainingArray[i] = String.valueOf(training.getId());
             }
             catch (Exception ex){
 
             }
         }
-        comboBox1.setModel(new DefaultComboBoxModel<>(trainingArray));
+        trainingsComboBox.setModel(new DefaultComboBoxModel<>(trainingArray));
 
         registrarButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String studentName = comboBox1.getSelectedItem().toString();
-                String teacherName = comboBox2.getSelectedItem().toString();
+                String studentName = studentsComboBox.getSelectedItem().toString();
+                String teacherName = teachersComboBox.getSelectedItem().toString();
                 String date = textField1.getText();
-                long trainingId = Long.parseLong(comboBox3.getSelectedItem().toString());
+
+
+
+                long trainingId = Long.parseLong(trainingsComboBox.getSelectedItem().toString());
 
                 Certificate newCertificate = new Certificate(0, studentName, teacherName, trainingId, date);
 

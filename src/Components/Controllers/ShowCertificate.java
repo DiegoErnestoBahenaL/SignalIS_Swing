@@ -13,7 +13,7 @@ import java.awt.event.ActionListener;
 public class ShowCertificate extends JInternalFrame{
     private JButton regresarButton;
     private JButton eliminarButton;
-    private JButton editarButton;
+    private JButton buscarPorNombre;
     private JButton siguienteButton;
     private JButton anteriorButton;
     private JPanel panel1;
@@ -125,6 +125,28 @@ public class ShowCertificate extends JInternalFrame{
                 }
                 catch ( Exception ex){
 
+                }
+            }
+        });
+
+        buscarPorNombre.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String nombreABuscar = tfNombre.getText(); // Obtiene el nombre de la interfaz
+                try {
+                    Certificate foundCertificate = landing.Certificates.findByUserName(nombreABuscar);
+                    if (foundCertificate != null) {
+                        // Se encontró el certificado, muestra los detalles en la interfaz
+                        tfNombre.setText(foundCertificate.getStudentName());
+                        tfMaestro.setText(foundCertificate.getTeacherName());
+                        tfCapacitacion.setText(String.valueOf(foundCertificate.getTrainingId()));
+                        tfFecha.setText(foundCertificate.getDate());
+                    } else {
+                        JOptionPane.showMessageDialog(showCertificate, "Certificado no encontrado");
+                    }
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    // Manejo de excepciones, por ejemplo, mostrar un mensaje de error en la interfaz
                 }
             }
         });

@@ -39,14 +39,14 @@
           <text value="Eliminar"/>
         </properties>
       </component>
-      <component id="200a6" class="javax.swing.JButton" binding="editarButton" default-binding="true">
+      <component id="200a6" class="javax.swing.JButton" binding="buscarPorNombre">
         <constraints>
           <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-4201219"/>
           <foreground color="-16777216"/>
-          <text value="Editar"/>
+          <text value="Buscar"/>
         </properties>
       </component>
       <component id="b2957" class="javax.swing.JButton" binding="siguienteButton" default-binding="true">
