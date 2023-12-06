@@ -1,5 +1,9 @@
 package Components;
 
+import Data.DataStructures.List;
+import Data.DataStructures.Queue;
+import Data.Models.*;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -27,8 +31,15 @@ public class Landing extends JFrame {
     private JMenuItem insertCertificate;
     private JMenuItem showCertificate;
 
+    public Queue<Affiliate> Affiliates = new Queue<>();
+    public List<Course> Courses = new List<>();
+    public List<Foundation> Foundations = new List<>();
+    public List<Training> Trainings = new List<>();
+    public List<Certificate> Certificates = new List<>();
 
-    public Landing(Login loginForm){
+
+
+    public Landing(Login loginForm, List<User> userList){
         Landing landing = this;
 
         initcomponents();
@@ -36,7 +47,7 @@ public class Landing extends JFrame {
         insertAffiliate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordAffiliate recordAffiliate = new RecordAffiliate();
+                RecordAffiliate recordAffiliate = new RecordAffiliate(landing, userList);
                 desktopPane.add(recordAffiliate);
 
             }
@@ -45,7 +56,7 @@ public class Landing extends JFrame {
         showAffiliate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowAffiliate displayAffiliate = new ShowAffiliate();
+                ShowAffiliate displayAffiliate = new ShowAffiliate(landing);
                 desktopPane.add(displayAffiliate);
             }
         });

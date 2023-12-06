@@ -1,6 +1,9 @@
 package Data.DataStructures;
 
+import Data.Models.User;
+
 import java.lang.reflect.Field;
+import java.util.Objects;
 
 public class List <T> {
     public Node<T> Beginning;
@@ -185,6 +188,35 @@ public class List <T> {
             long idValue = (long)idField.get(data);
 
             if ( idValue == id){
+                return temp.getData();
+            }
+            temp = temp.getNext();
+            position++;
+        }
+        throw new Exception("Element not found");
+    }
+    //This only works for User Entity
+    public T findByUserName(String name) throws Exception{
+        Node<T> temp;
+
+
+        if (isEmpty()){
+            throw  new Exception("List is empty");
+        }
+
+        temp = Beginning;
+        int position = 0;
+        while (temp != null){
+
+            Object data = (Object) temp.getData();
+
+            Field nameField = data.getClass().getDeclaredField("UserName");
+
+            nameField.setAccessible(true);
+
+            String nameValue = (String)nameField.get(data);
+
+            if (Objects.equals(nameValue, name)){
                 return temp.getData();
             }
             temp = temp.getNext();

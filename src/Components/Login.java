@@ -53,7 +53,7 @@ public class Login extends JFrame{
 
                            hasAccess = true;
 
-                            Landing landingForm = new Landing(loginForm);
+                            Landing landingForm = new Landing(loginForm, loginForm.Users);
 
                             landingForm.setVisible(true);
 

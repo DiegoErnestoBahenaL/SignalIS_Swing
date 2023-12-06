@@ -7,12 +7,12 @@ public class Affiliate {
     private String FathersLastName;
     private String MothersLastName;
     private int Age;
-    private AffiliateTypeEnum Type;
+    private String Type;
     private long UserId;
 
     public  Affiliate(){}
 
-    public Affiliate(long id, String name, String fathersLastName, String mothersLastName, int age, AffiliateTypeEnum type, long userId) {
+    public Affiliate(long id, String name, String fathersLastName, String mothersLastName, int age, String type, long userId) {
         Id = id;
         Name = name;
         FathersLastName = fathersLastName;
@@ -62,11 +62,11 @@ public class Affiliate {
         Age = age;
     }
 
-    public AffiliateTypeEnum getType() {
+    public String getType() {
         return Type;
     }
 
-    public void setType(AffiliateTypeEnum type) {
+    public void setType(String type) {
         Type = type;
     }
 

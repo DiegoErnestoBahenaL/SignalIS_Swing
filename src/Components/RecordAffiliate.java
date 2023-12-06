@@ -1,18 +1,25 @@
 package Components;
 
+import Data.DataStructures.List;
+import Data.Models.Affiliate;
+import Data.Models.AffiliateTypeEnum;
+import Data.Models.User;
+
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class RecordAffiliate extends JInternalFrame{
     private JPanel panel1;
     private JButton regresarButton;
     private JButton registrarButton;
-    private JTextField textField1;
-    private JTextField textField2;
-    private JTextField textField3;
-    private JTextField textField5;
-    private JComboBox comboBox1;
-    private JComboBox comboBox2;
+    private JTextField nameJtf;
+    private JTextField fathersLastNameJtf;
+    private JTextField mothersLastNameJtf;
+    private JTextField ageJtf;
+    private JComboBox selectType;
+    private JComboBox selectUser;
     private JLabel titulo;
     private JLabel sub1;
     private JLabel sub2;
@@ -21,7 +28,72 @@ public class RecordAffiliate extends JInternalFrame{
     private JLabel sub5;
     private JLabel sub6;
 
-    public RecordAffiliate(){
+    long AffiliateCurrentId = 0;
+
+
+    public RecordAffiliate(Landing landing, List<User> Users){
+       initComponents();
+
+       RecordAffiliate recordAffiliate = this;
+
+        List<String> userNames = new List<String>();
+
+        String[] namesArray = new String[Users.Count];
+
+        for (int i = 0; i < Users.Count; i ++){
+            try{
+                User user = Users.getItemAtIndex(i);
+
+                namesArray[i] = user.getUserName();
+            }
+            catch (Exception ex){
+
+            }
+
+        }
+
+        selectUser.setModel(new DefaultComboBoxModel<>(namesArray));
+
+        regresarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                recordAffiliate.dispose();
+            }
+        });
+        registrarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                User selectedUser = new User();
+                try
+                {
+                    String nameSelected = selectUser.getSelectedItem().toString();
+                    selectedUser =  Users.findByUserName(nameSelected);
+                }
+                catch (Exception ex){
+
+                }
+
+
+                Affiliate newAffiliate = new Affiliate(
+                        AffiliateCurrentId ++,
+                        nameJtf.getText(),
+                        fathersLastNameJtf.getText(),
+                        mothersLastNameJtf.getText(),
+                        Integer.valueOf(ageJtf.getText()),
+                        selectType.getSelectedItem().toString(),
+                        selectedUser.getId()
+                );
+
+                landing.Affiliates.push(newAffiliate);
+
+                JOptionPane.showMessageDialog(recordAffiliate, "Afiliado registrado exitosamente", "Registrar Afiliado", JOptionPane.INFORMATION_MESSAGE);
+                recordAffiliate.dispose();
+            }
+        });
+    }
+
+
+    public void initComponents(){
         this.setSize(500, 300);
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
@@ -30,7 +102,11 @@ public class RecordAffiliate extends JInternalFrame{
         this.setIconifiable(true); // set minimize
         this.setClosable(true);
         this.setResizable(true);
-        this.setMaximizable(true);
+
+        selectType.setModel(new DefaultComboBoxModel<>(AffiliateTypeEnum.values()));
+
+
+
 
 //-----------------------------------FONTS------------------------------------------------------//
         String general_font = "Font";

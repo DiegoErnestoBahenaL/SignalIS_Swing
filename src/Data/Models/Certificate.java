@@ -56,4 +56,13 @@ public class Certificate {
     public void setDate(String date) {
         Date = date;
     }
+
+    @Override
+    public String toString (){
+        return "Id: " + Id + "\n" +
+                "Nombre del Estudiante: " + StudentName + "\n" +
+                "Nombre del Profesor: " + TeacherName + "\n" +
+                "Id del curso: "  + TrainingId + "\n"  +
+                "Fecha: " + Date;
+    }
 }

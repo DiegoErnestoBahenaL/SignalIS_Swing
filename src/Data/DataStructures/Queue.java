@@ -48,21 +48,22 @@ public class Queue<T> {
             End.setNext(null);
         }
     }
-    public String show (){
+    public List<T> show (){
+        List<T> list = new List<>();
 
         if (isEmpty())
-            return "La cola está vacía";
+            return  list;
         else {
-
-            StringBuilder content = new StringBuilder();
 
             DoubleNode<T> temp = Beginning;
 
             while (temp != null){
-                content.append(temp.getData()).append("  ");
+
+                list.insertAtEnd(temp.getData());
+
                 temp = temp.getNext();
             }
-            return content.toString();
+            return list;
         }
 
     }
