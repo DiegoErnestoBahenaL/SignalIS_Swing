@@ -107,7 +107,7 @@ public class Landing extends JFrame {
         showTraining.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowTraining displayTraining = new ShowTraining();
+                ShowTraining displayTraining = new ShowTraining(landing);
                 desktopPane.add(displayTraining);
             }
         });
