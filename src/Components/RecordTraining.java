@@ -1,5 +1,9 @@
 package Components;
 
+import Data.DataStructures.List;
+import Data.Models.Course;
+import Data.Models.User;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -25,7 +29,9 @@ public class RecordTraining extends JInternalFrame{
     private JRadioButton radioButton2;
     private JRadioButton radioButton3;
 
-    public RecordTraining(){
+    long AffiliateCurrentId = 0;
+
+    public RecordTraining(Landing landing, List<User> Users, List<Course> Couses){
         this.setSize(500, 300);
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
@@ -44,6 +50,8 @@ public class RecordTraining extends JInternalFrame{
         this.sub4.setFont(subtitle_font);
         this.sub5.setFont(subtitle_font);
         this.sub6.setFont(subtitle_font);
+
+
 
     }
 }
