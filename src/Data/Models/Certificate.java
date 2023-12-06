@@ -28,7 +28,6 @@ public class Certificate {
     public String getStudentName() {
         return StudentName;
     }
-
     public void setStudentName(String studentName) {
         StudentName = studentName;
     }

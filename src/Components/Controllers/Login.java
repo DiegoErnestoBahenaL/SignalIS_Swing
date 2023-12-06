@@ -27,6 +27,7 @@ public class Login extends JFrame{
         Users.insertAtBeginning(new User(2, "estela@hotmail.com", "12345"));
         Users.insertAtBeginning(new User(3, "enock@hotmail.com", "12345"));
         Users.insertAtBeginning(new User(4, "adrian@hotmail.com", "12345"));
+        Users.insertAtBeginning(new User(5, "admin", "12345"));
 
         Login loginForm = this;
 

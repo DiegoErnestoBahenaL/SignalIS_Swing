@@ -166,20 +166,20 @@ public class ShowTraining extends JInternalFrame{
 //
 //        });
 
-//        eliminarButton.addActionListener(new ActionListener() {
-//            @Override
-//            public void actionPerformed(ActionEvent e) {
-//                try {
-//                    Course courseToDelete = landing.Courses.getItemAtIndex(currentIndex);
-//
-//                    landing.Courses.delete(courseToDelete);
-//
-//                    JOptionPane.showMessageDialog(showTraining, "Curso Eliminado");
-//                }
-//                catch ( Exception ex){
-//
-//                }
-//            }
-//        });
+        eliminarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Training trainingToDelete = landing.Trainings.getItemAtIndex(currentIndex);
+
+                    landing.Trainings.delete(trainingToDelete);
+
+                    JOptionPane.showMessageDialog(showTraining, "Curso Eliminado");
+                }
+                catch ( Exception ex){
+
+                }
+            }
+        });
     }
 }

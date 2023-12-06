@@ -61,6 +61,19 @@ public class RecordCertificate extends JInternalFrame{
 
         comboBox3.setModel(new DefaultComboBoxModel<>(namesArray));
 
+        String[] trainingArray = new String[landing.Trainings.Count];
+
+        for (int i = 0; i < landing.Trainings.Count; i ++){
+            try{
+                Training training = landing.Trainings.getItemAtIndex(i);
+
+                trainingArray[i] = training.getStartDate();
+            }
+            catch (Exception ex){
+
+            }
+        }
+        comboBox1.setModel(new DefaultComboBoxModel<>(trainingArray));
 
         registrarButton.addActionListener(new ActionListener() {
             @Override
