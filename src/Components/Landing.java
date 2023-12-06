@@ -80,7 +80,7 @@ public class Landing extends JFrame {
         insertCourse.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordCourse recordCourse = new RecordCourse();
+                RecordCourse recordCourse = new RecordCourse(landing, userList);
                 desktopPane.add(recordCourse);
             }
         });
@@ -88,7 +88,7 @@ public class Landing extends JFrame {
         showCourse.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowCourse displayCourse = new ShowCourse();
+                ShowCourse displayCourse = new ShowCourse(landing);
                 desktopPane.add(displayCourse);
             }
         });
@@ -96,8 +96,8 @@ public class Landing extends JFrame {
         insertTraining.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordCourse recordCourse = new RecordCourse();
-                desktopPane.add(recordCourse);
+                RecordTraining recordTraining = new RecordTraining(landing, userList, Courses);
+                desktopPane.add(recordTraining);
             }
         });
 
@@ -112,7 +112,7 @@ public class Landing extends JFrame {
         insertCertificate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordCertificate recordCertificate = new RecordCertificate();
+                RecordCertificate recordCertificate = new RecordCertificate(landing, Affiliates, userList, Trainings);
                 desktopPane.add(recordCertificate);
             }
         });
@@ -120,7 +120,7 @@ public class Landing extends JFrame {
         showCertificate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowCertificate displayCertificate = new ShowCertificate();
+                ShowCertificate displayCertificate = new ShowCertificate(landing);
                 desktopPane.add(displayCertificate);
             }
         });

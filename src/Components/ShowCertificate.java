@@ -20,7 +20,7 @@ public class ShowCertificate extends JInternalFrame{
     private JLabel sub4;
     private JLabel titulo;
 
-    public ShowCertificate(){
+    public ShowCertificate(Landing landing){
         this.setSize(500, 300);
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
@@ -37,6 +37,7 @@ public class ShowCertificate extends JInternalFrame{
         this.sub2.setFont(subtitle_font);
         this.sub3.setFont(subtitle_font);
         this.sub4.setFont(subtitle_font);
+
 
 
     }

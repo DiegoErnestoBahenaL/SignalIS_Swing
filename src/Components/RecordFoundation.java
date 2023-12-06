@@ -1,5 +1,7 @@
 package Components;
 
+import Data.Models.Foundation;
+import Data.DataStructures.List;
 import javax.swing.*;
 import java.awt.*;
 
@@ -20,6 +22,8 @@ public class RecordFoundation extends JInternalFrame{
     private JRadioButton radioButton1;
     private JRadioButton radioButton2;
     private JRadioButton radioButton3;
+
+    public List<Foundation> foundationList= new List<Foundation>();
 
     public RecordFoundation(){
 
