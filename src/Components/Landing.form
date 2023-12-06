@@ -1,38 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Components.Landing">
-  <grid id="27dc6" binding="panel1" default-binding="true" layout-manager="BorderLayout" hgap="0" vgap="0">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="20" y="20" width="551" height="400"/>
+      <xy x="20" y="20" width="500" height="400"/>
     </constraints>
-    <properties>
-      <background color="-1"/>
-    </properties>
+    <properties/>
     <border type="none"/>
     <children>
-      <grid id="9d86" class="javax.swing.JMenuBar" binding="MenuBar" layout-manager="GridLayoutManager" row-count="1" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="b193a" class="javax.swing.JDesktopPane" binding="desktopPane" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="8a811" class="javax.swing.JMenuBar" binding="mainMenu" layout-manager="GridLayoutManager" row-count="1" column-count="6" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints border-constraint="North"/>
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
         <properties/>
         <border type="none"/>
         <children>
-          <grid id="42eb3" class="javax.swing.JMenu" binding="AffiliateMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="83f0b" class="javax.swing.JMenu" binding="afiliadosMenu" default-binding="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <popupMenuVisible value="false"/>
-              <selected value="false"/>
+              <horizontalTextPosition value="0"/>
               <text value="Afiliados"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="a700" class="javax.swing.JMenuItem" binding="InsertAffiliates">
+              <component id="2a400" class="javax.swing.JMenuItem" binding="insertAffiliate">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="223da" class="javax.swing.JMenuItem" binding="DisplayAffiliates">
+              <component id="f2a0d" class="javax.swing.JMenuItem" binding="showAffiliate">
                 <constraints/>
                 <properties>
                   <text value="Mostrar"/>
@@ -40,46 +48,45 @@
               </component>
             </children>
           </grid>
-          <grid id="72e40" class="javax.swing.JMenu" binding="FoundationMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="f96f2" class="javax.swing.JMenu" binding="fundaciónMenu" default-binding="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Fundación"/>
+              <text value="Fundación "/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="1b3c7" class="javax.swing.JMenuItem" binding="InsertFoundation">
+              <component id="271eb" class="javax.swing.JMenuItem" binding="insertFoundation">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="94b61" class="javax.swing.JMenuItem" binding="DisplayFoundation">
+              <component id="b939d" class="javax.swing.JMenuItem" binding="showFoundation">
                 <constraints/>
                 <properties>
-                  <armed value="true"/>
                   <text value="Mostrar"/>
                 </properties>
               </component>
             </children>
           </grid>
-          <grid id="ea032" class="javax.swing.JMenu" binding="CourseMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="5f661" class="javax.swing.JMenu" binding="cursoMenu" default-binding="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
-              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="7" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Curso"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="3c27d" class="javax.swing.JMenuItem" binding="InsertCourse">
+              <component id="80444" class="javax.swing.JMenuItem" binding="insertCourse">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="94d42" class="javax.swing.JMenuItem" binding="DisplayCourse">
+              <component id="1fc46" class="javax.swing.JMenuItem" binding="showCourse">
                 <constraints/>
                 <properties>
                   <text value="Mostrar"/>
@@ -87,22 +94,22 @@
               </component>
             </children>
           </grid>
-          <grid id="1a020" class="javax.swing.JMenu" binding="TrainingMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="af3b" class="javax.swing.JMenu" binding="capacitaciónMenu" default-binding="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
-              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Capacitación"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="10536" class="javax.swing.JMenuItem" binding="InsertTraining">
+              <component id="f720b" class="javax.swing.JMenuItem" binding="insertTraining">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="71d55" class="javax.swing.JMenuItem" binding="DisplayTraining">
+              <component id="21d6a" class="javax.swing.JMenuItem" binding="showTraining">
                 <constraints/>
                 <properties>
                   <text value="Mostrar"/>
@@ -110,22 +117,22 @@
               </component>
             </children>
           </grid>
-          <grid id="ccba9" class="javax.swing.JMenu" binding="CertificateMenu" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+          <grid id="75329" class="javax.swing.JMenu" binding="certificadoMenu" default-binding="true" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
             <constraints>
-              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="3" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Certificado"/>
             </properties>
             <border type="none"/>
             <children>
-              <component id="cb432" class="javax.swing.JMenuItem" binding="InsertCertificate">
+              <component id="28ab9" class="javax.swing.JMenuItem" binding="insertCertificate">
                 <constraints/>
                 <properties>
                   <text value="Insertar"/>
                 </properties>
               </component>
-              <component id="aff55" class="javax.swing.JMenuItem" binding="DisplayCertificate">
+              <component id="3bdbb" class="javax.swing.JMenuItem" binding="showCertificate">
                 <constraints/>
                 <properties>
                   <text value="Mostrar"/>
@@ -133,35 +140,18 @@
               </component>
             </children>
           </grid>
-          <grid id="736b9" class="javax.swing.JMenu" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="95c04" class="javax.swing.JMenu" binding="cerrarMenu" default-binding="true" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="0" left="0" bottom="0" right="0"/>
             <constraints>
-              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false">
-                <maximum-size width="500" height="30"/>
-              </grid>
+              <grid row="0" column="5" row-span="1" col-span="1" vsize-policy="3" hsize-policy="7" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <text value="Cerrar"/>
             </properties>
             <border type="none"/>
-            <children>
-              <vspacer id="beb76">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
-                </constraints>
-              </vspacer>
-            </children>
+            <children/>
           </grid>
         </children>
-      </grid>
-      <grid id="f536c" class="javax.swing.JDesktopPane" binding="Desk_Pane" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-        <margin top="0" left="0" bottom="0" right="0"/>
-        <constraints border-constraint="Center"/>
-        <properties>
-          <background color="-2035457"/>
-        </properties>
-        <border type="none"/>
-        <children/>
       </grid>
     </children>
   </grid>

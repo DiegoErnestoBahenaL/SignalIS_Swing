@@ -23,7 +23,7 @@ public class ShowCertificate extends JInternalFrame{
     public ShowCertificate(){
         this.setSize(500, 300);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Consultar Certificados");
         this.setVisible(true);
         this.setClosable(true);

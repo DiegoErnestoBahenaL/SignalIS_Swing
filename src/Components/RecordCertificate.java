@@ -20,7 +20,7 @@ public class RecordCertificate extends JInternalFrame{
     public RecordCertificate(){
         this.setSize(700, 500);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Registro de Certificado");
         this.setVisible(true);
         this.setClosable(true);

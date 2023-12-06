@@ -27,7 +27,7 @@ public class ShowFoundation extends JInternalFrame{
     public ShowFoundation(){
         this.setSize(500, 300);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Consultar Fundaciones");
         this.setVisible(true);
         this.setClosable(true);

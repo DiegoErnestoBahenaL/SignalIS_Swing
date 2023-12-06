@@ -24,10 +24,12 @@ public class RecordAffiliate extends JInternalFrame{
     public RecordAffiliate(){
         this.setSize(500, 300);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Registro de Curso");
         this.setVisible(true);
+        this.setIconifiable(true); // set minimize
         this.setClosable(true);
+        this.setResizable(true);
         this.setMaximizable(true);
 
 //-----------------------------------FONTS------------------------------------------------------//

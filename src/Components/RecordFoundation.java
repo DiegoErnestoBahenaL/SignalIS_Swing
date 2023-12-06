@@ -25,7 +25,7 @@ public class RecordFoundation extends JInternalFrame{
 
         this.setSize(700, 500);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Registro de Fundación");
         this.setVisible(true);
         this.setClosable(true);

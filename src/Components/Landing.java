@@ -3,110 +3,151 @@ package Components;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
-public class Landing extends JFrame{
-    private JPanel panel1;
-    private JMenuItem InsertAffiliates;
-    private JDesktopPane Desk_Pane;
-    private JMenu AffiliateMenu;
-    private JMenuBar MenuBar;
-    private JMenuItem InsertFoundation;
-    private JMenuItem DisplayFoundation;
-    private JMenu FoundationMenu;
-    private JMenu CourseMenu;
-    private JMenuItem InsertCourse;
-    private JMenuItem DisplayCourse;
-    private JMenu TrainingMenu;
-    private JMenuItem InsertTraining;
-    private JMenuItem DisplayTraining;
-    private JMenu CertificateMenu;
-    private JMenuItem InsertCertificate;
-    private JMenuItem DisplayCertificate;
-    private JMenuItem DisplayAffiliates;
+public class Landing extends JFrame {
+    private JPanel mainPanel;
+    private JDesktopPane desktopPane;
+    private JMenuBar mainMenu;
+    private JMenu afiliadosMenu;
+    private JMenu fundaciónMenu;
+    private JMenu cursoMenu;
+    private JMenu capacitaciónMenu;
+    private JMenu certificadoMenu;
+    private JMenu cerrarMenu;
+    private JMenuItem insertAffiliate;
+    private JMenuItem showAffiliate;
+    private JMenuItem insertFoundation;
+    private JMenuItem showFoundation;
+    private JMenuItem insertCourse;
+    private JMenuItem showCourse;
+    private JMenuItem insertTraining;
+    private JMenuItem showTraining;
+    private JMenuItem insertCertificate;
+    private JMenuItem showCertificate;
 
-    public Landing(){
-        initcomponents();
+
+    public Landing(Login loginForm){
         Landing landing = this;
-        InsertAffiliates.addActionListener(new ActionListener() {
+
+        initcomponents();
+
+        insertAffiliate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordAffiliate r_a = new RecordAffiliate();
-                Desk_Pane.add(r_a);
+                RecordAffiliate recordAffiliate = new RecordAffiliate();
+                desktopPane.add(recordAffiliate);
+
             }
         });
-        InsertFoundation.addActionListener(new ActionListener() {
+
+        showAffiliate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordFoundation record_foundation = new RecordFoundation();
-                Desk_Pane.add(record_foundation);
+                ShowAffiliate displayAffiliate = new ShowAffiliate();
+                desktopPane.add(displayAffiliate);
             }
         });
-        InsertCourse.addActionListener(new ActionListener() {
+
+        insertFoundation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordCourse record_course = new RecordCourse();
-                Desk_Pane.add(record_course);
+                RecordFoundation recordFoundation = new RecordFoundation();
+                desktopPane.add(recordFoundation);
             }
         });
-        InsertTraining.addActionListener(new ActionListener() {
+
+        showFoundation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordTraining record_training = new RecordTraining();
-                Desk_Pane.add(record_training);
+                ShowFoundation displayFoundation = new ShowFoundation();
+                desktopPane.add(displayFoundation);
             }
         });
-        InsertCertificate.addActionListener(new ActionListener() {
+
+        insertCourse.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordCertificate record_certificate = new RecordCertificate();
-                Desk_Pane.add(record_certificate);
+                RecordCourse recordCourse = new RecordCourse();
+                desktopPane.add(recordCourse);
             }
         });
-        DisplayFoundation.addActionListener(new ActionListener() {
+
+        showCourse.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowFoundation s_f = new ShowFoundation();
-                Desk_Pane.add(s_f);
+                ShowCourse displayCourse = new ShowCourse();
+                desktopPane.add(displayCourse);
             }
         });
-        DisplayCourse.addActionListener(new ActionListener() {
+
+        insertTraining.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowCourse s_c = new ShowCourse();
-                Desk_Pane.add(s_c);
+                RecordCourse recordCourse = new RecordCourse();
+                desktopPane.add(recordCourse);
             }
         });
-        DisplayTraining.addActionListener(new ActionListener() {
+
+        showTraining.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowTraining show_training = new ShowTraining();
-                Desk_Pane.add(show_training);
+                ShowTraining displayTraining = new ShowTraining();
+                desktopPane.add(displayTraining);
             }
         });
-        DisplayCertificate.addActionListener(new ActionListener() {
+
+        insertCertificate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowCertificate show_certificate = new ShowCertificate();
-                Desk_Pane.add(show_certificate);
+                RecordCertificate recordCertificate = new RecordCertificate();
+                desktopPane.add(recordCertificate);
             }
         });
-        DisplayAffiliates.addActionListener((new ActionListener() {
+
+        showCertificate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ShowAffiliate show_affiliate = new ShowAffiliate();
-                Desk_Pane.add(show_affiliate);
+                ShowCertificate displayCertificate = new ShowCertificate();
+                desktopPane.add(displayCertificate);
             }
-        }));
-        this.setContentPane(panel1);
-        this.setVisible(true);
+        });
+
+        cerrarMenu.addMouseListener(new MouseListener() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                landing.setVisible(false);
+                loginForm.setVisible(true);
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+
+            }
+        });
     }
+
+
     public void initcomponents(){
+        this.setContentPane(mainPanel);
         this.setSize(700, 600);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setTitle("Landing");
-    }
-
-    public static void main(String[] args) {
-        Landing window = new Landing();
     }
 }

@@ -18,7 +18,7 @@ public class RecordCourse extends JInternalFrame{
     public RecordCourse(){
         this.setSize(700, 500);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Registro de Curso");
         this.setVisible(true);
         this.setClosable(true);

@@ -11,7 +11,7 @@ public class ShowAffiliate extends JInternalFrame{
     public ShowAffiliate(){
         this.setSize(500, 300);
         this.setContentPane(panel1);
-        this.setDefaultCloseOperation(JInternalFrame.EXIT_ON_CLOSE);
+        this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Consultar Afiliados");
         this.setVisible(true);
         this.setClosable(true);
