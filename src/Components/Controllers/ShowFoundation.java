@@ -1,35 +1,32 @@
-package Components;
+package Components.Controllers;
 
-import Data.Models.Foundation;
-import Data.DataStructures.List;
 import javax.swing.*;
 import java.awt.*;
 
-public class RecordFoundation extends JInternalFrame{
-    private JPanel panel1;
+public class ShowFoundation extends JInternalFrame{
     private JTextField textField1;
     private JSpinner spinner1;
+    private JButton guardarButton;
+    private JButton eliminarButton;
     private JButton regresarButton;
-    private JButton registrarButton;
+    private JButton siguienteButton;
+    private JButton anteriorButton;
     private JLabel titulo;
     private JLabel sub1;
     private JLabel sub2;
     private JLabel sub3;
     private JLabel sub4;
+    private JPanel panel1;
     private JList list1;
     private JList list2;
 
-    public List<Foundation> foundationList= new List<Foundation>();
-
-    public RecordFoundation(){
-
-        this.setSize(700, 500);
+    public ShowFoundation(){
+        this.setSize(500, 300);
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
-        this.setTitle("Registro de Fundación");
+        this.setTitle("Consultar Fundaciones");
         this.setVisible(true);
         this.setClosable(true);
-
 
         String general_font = "Font";
         Font title_font = new Font(general_font, Font.BOLD,  36);
@@ -40,5 +37,7 @@ public class RecordFoundation extends JInternalFrame{
         this.sub2.setFont(subtitle_font);
         this.sub3.setFont(subtitle_font);
         this.sub4.setFont(subtitle_font);
+
+
     }
 }

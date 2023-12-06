@@ -6,12 +6,12 @@ public class Foundation {
     private long Id;
     private String Name;
     private double Budget;
-    private List<Affiliate> Affiliates;
-    private List<Training> Trainings;
+    private List<String> Affiliates;
+    private List<String> Trainings;
 
     public Foundation(){}
 
-    public Foundation(long id, String name, double budget, List<Affiliate> affiliates, List<Training> trainings) {
+    public Foundation(long id, String name, double budget, List<String> affiliates, List<String> trainings) {
         Id = id;
         Name = name;
         Budget = budget;
@@ -44,19 +44,19 @@ public class Foundation {
         Budget = budget;
     }
 
-    public List<Affiliate> getAffiliates() {
+    public List<String> getAffiliates() {
         return Affiliates;
     }
 
-    public void setAffiliates(List<Affiliate> affiliates) {
+    public void setAffiliates(List<String> affiliates) {
         Affiliates = affiliates;
     }
 
-    public List<Training> getTrainings() {
+    public List<String> getTrainings() {
         return Trainings;
     }
 
-    public void setTrainings(List<Training> trainings) {
+    public void setTrainings(List<String> trainings) {
         Trainings = trainings;
     }
 }

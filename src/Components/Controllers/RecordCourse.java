@@ -1,4 +1,4 @@
-package Components;
+package Components.Controllers;
 
 import java.awt.Font;
 import javax.swing.*;

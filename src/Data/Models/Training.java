@@ -9,12 +9,12 @@ public class Training {
     private String EndDate;
     private String Location;
     private int Capacity;
-    private List<Course> Courses;
-    private List<Affiliate> Students;
+    private List<Long> Courses;
+    private List<String> Students;
 
     public Training (){}
 
-    public Training(long id, String startDate, String endDate, String location, int capacity, List<Course> courses, List<Affiliate> students) {
+    public Training(long id, String startDate, String endDate, String location, int capacity, List<Long> courses, List<String> students) {
         Id = id;
         StartDate = startDate;
         EndDate = endDate;
@@ -65,19 +65,19 @@ public class Training {
         Capacity = capacity;
     }
 
-    public List<Course> getCourses() {
+    public List<Long> getCourses() {
         return Courses;
     }
 
-    public void setCourses(List<Course> courses) {
+    public void setCourses(List<Long> courses) {
         Courses = courses;
     }
 
-    public List<Affiliate> getStudents() {
+    public List<String> getStudents() {
         return Students;
     }
 
-    public void setStudents(List<Affiliate> students) {
+    public void setStudents(List<String> students) {
         Students = students;
     }
 }

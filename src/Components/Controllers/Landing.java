@@ -1,4 +1,4 @@
-package Components;
+package Components.Controllers;
 
 import Data.DataStructures.List;
 import Data.DataStructures.Queue;

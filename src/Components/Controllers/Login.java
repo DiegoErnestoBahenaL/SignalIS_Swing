@@ -1,10 +1,9 @@
-package Components;
+package Components.Controllers;
 
 import Data.DataStructures.List;
 import Data.Models.User;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 

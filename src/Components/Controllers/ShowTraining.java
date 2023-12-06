@@ -1,4 +1,4 @@
-package Components;
+package Components.Controllers;
 
 import javax.swing.*;
 import java.awt.*;
