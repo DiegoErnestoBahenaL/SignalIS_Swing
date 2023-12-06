@@ -6,23 +6,19 @@ import java.awt.*;
 public class ShowFoundation extends JInternalFrame{
     private JTextField textField1;
     private JSpinner spinner1;
-    private JRadioButton radioButton4;
-    private JRadioButton radioButton5;
-    private JRadioButton radioButton6;
     private JButton guardarButton;
     private JButton eliminarButton;
     private JButton regresarButton;
     private JButton siguienteButton;
     private JButton anteriorButton;
-    private JCheckBox checkBox1;
-    private JCheckBox checkBox2;
-    private JCheckBox checkBox3;
     private JLabel titulo;
     private JLabel sub1;
     private JLabel sub2;
     private JLabel sub3;
     private JLabel sub4;
     private JPanel panel1;
+    private JList list1;
+    private JList list2;
 
     public ShowFoundation(){
         this.setSize(500, 300);

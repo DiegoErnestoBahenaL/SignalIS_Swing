@@ -12,9 +12,6 @@ public class RecordTraining extends JInternalFrame{
     private JTextField textField1;
     private JTextField textField2;
     private JSpinner spinner1;
-    private JCheckBox opción1CheckBox1;
-    private JCheckBox opción2CheckBox1;
-    private JCheckBox opción3CheckBox1;
     private JTextArea textArea1;
     private JButton regresarButton;
     private JButton registrarButton;
@@ -25,9 +22,8 @@ public class RecordTraining extends JInternalFrame{
     private JLabel sub4;
     private JLabel sub5;
     private JLabel sub6;
-    private JRadioButton radioButton1;
-    private JRadioButton radioButton2;
-    private JRadioButton radioButton3;
+    private JList list1;
+    private JList list2;
 
     long AffiliateCurrentId = 0;
 

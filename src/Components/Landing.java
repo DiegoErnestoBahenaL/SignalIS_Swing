@@ -31,23 +31,25 @@ public class Landing extends JFrame {
     private JMenuItem insertCertificate;
     private JMenuItem showCertificate;
 
+    public List<User> Users;
     public Queue<Affiliate> Affiliates = new Queue<>();
     public List<Course> Courses = new List<>();
     public List<Foundation> Foundations = new List<>();
     public List<Training> Trainings = new List<>();
     public List<Certificate> Certificates = new List<>();
 
+    long AffiliateCurrentId = 0;
 
 
     public Landing(Login loginForm, List<User> userList){
         Landing landing = this;
-
+        Users = userList;
         initcomponents();
 
         insertAffiliate.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordAffiliate recordAffiliate = new RecordAffiliate(landing, userList);
+                RecordAffiliate recordAffiliate = new RecordAffiliate(landing);
                 desktopPane.add(recordAffiliate);
 
             }
@@ -80,7 +82,7 @@ public class Landing extends JFrame {
         insertCourse.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordCourse recordCourse = new RecordCourse(landing, userList);
+                RecordCourse recordCourse = new RecordCourse(landing);
                 desktopPane.add(recordCourse);
             }
         });

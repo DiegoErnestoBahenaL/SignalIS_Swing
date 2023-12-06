@@ -100,6 +100,38 @@ public class List <T> {
         Count--;
     }
 
+    public void delete(T data) throws  Exception {
+        if (isEmpty()){
+            throw new Exception("List is empty");
+        }
+
+        Node<T> temp;
+        Node<T> previous;
+
+        temp = Beginning;
+        previous = null;
+
+        if (temp != null && temp.getData() == data ){
+            Beginning = temp.getNext();
+
+            return;
+        }
+
+
+
+        while (temp != null){
+
+            if (temp.getData() == data){
+                previous.setNext(temp.getNext());
+
+                return;
+            }
+            previous = temp;
+            temp = temp.getNext();
+
+        }
+    }
+
     public void set (int index, T data)  throws Exception {
 
         if (isEmpty()){

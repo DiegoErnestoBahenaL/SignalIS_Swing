@@ -5,11 +5,14 @@ import Data.Models.Affiliate;
 
 import javax.swing.*;
 import javax.swing.table.AbstractTableModel;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ShowAffiliate extends JInternalFrame{
     private JPanel panel1;
     private JLabel titulo;
     private JTable affiliatesTable;
+    private JButton desencolarButton;
 
     public ShowAffiliate(Landing landing){
 
@@ -28,6 +31,17 @@ public class ShowAffiliate extends JInternalFrame{
 
 
         this.setVisible(true);
+        desencolarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                landing.Affiliates.pop();
+
+                List<Affiliate> affiliates = landing.Affiliates.show();
+                AffiliateTableModel model = new AffiliateTableModel(affiliates);
+
+                affiliatesTable.setModel(model);
+            }
+        });
     }
 
     private static class AffiliateTableModel extends AbstractTableModel{

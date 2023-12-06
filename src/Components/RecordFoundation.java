@@ -9,9 +9,6 @@ public class RecordFoundation extends JInternalFrame{
     private JPanel panel1;
     private JTextField textField1;
     private JSpinner spinner1;
-    private JCheckBox opción1CheckBox1;
-    private JCheckBox opción2CheckBox1;
-    private JCheckBox opción3CheckBox1;
     private JButton regresarButton;
     private JButton registrarButton;
     private JLabel titulo;
@@ -19,9 +16,8 @@ public class RecordFoundation extends JInternalFrame{
     private JLabel sub2;
     private JLabel sub3;
     private JLabel sub4;
-    private JRadioButton radioButton1;
-    private JRadioButton radioButton2;
-    private JRadioButton radioButton3;
+    private JList list1;
+    private JList list2;
 
     public List<Foundation> foundationList= new List<Foundation>();
 

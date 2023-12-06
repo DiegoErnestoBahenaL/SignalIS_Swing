@@ -28,21 +28,21 @@ public class RecordAffiliate extends JInternalFrame{
     private JLabel sub5;
     private JLabel sub6;
 
-    long AffiliateCurrentId = 0;
 
 
-    public RecordAffiliate(Landing landing, List<User> Users){
+
+    public RecordAffiliate(Landing landing){
        initComponents();
 
        RecordAffiliate recordAffiliate = this;
 
         List<String> userNames = new List<String>();
 
-        String[] namesArray = new String[Users.Count];
+        String[] namesArray = new String[landing.Users.Count];
 
-        for (int i = 0; i < Users.Count; i ++){
+        for (int i = 0; i < landing.Users.Count; i ++){
             try{
-                User user = Users.getItemAtIndex(i);
+                User user = landing.Users.getItemAtIndex(i);
 
                 namesArray[i] = user.getUserName();
             }
@@ -67,15 +67,16 @@ public class RecordAffiliate extends JInternalFrame{
                 try
                 {
                     String nameSelected = selectUser.getSelectedItem().toString();
-                    selectedUser =  Users.findByUserName(nameSelected);
+                    selectedUser =  landing.Users.findByUserName(nameSelected);
                 }
                 catch (Exception ex){
 
                 }
 
+                landing.AffiliateCurrentId += 1 ;
 
                 Affiliate newAffiliate = new Affiliate(
-                        AffiliateCurrentId ++,
+                        landing.AffiliateCurrentId ,
                         nameJtf.getText(),
                         fathersLastNameJtf.getText(),
                         mothersLastNameJtf.getText(),
@@ -87,12 +88,18 @@ public class RecordAffiliate extends JInternalFrame{
                 landing.Affiliates.push(newAffiliate);
 
                 JOptionPane.showMessageDialog(recordAffiliate, "Afiliado registrado exitosamente", "Registrar Afiliado", JOptionPane.INFORMATION_MESSAGE);
-                recordAffiliate.dispose();
+                clean();
             }
         });
     }
 
-
+    public void clean(){
+        nameJtf.setText("");
+        fathersLastNameJtf.setText("");
+        mothersLastNameJtf.setText("");
+        ageJtf.setText("");
+        nameJtf.requestFocus();
+    }
     public void initComponents(){
         this.setSize(500, 300);
         this.setContentPane(panel1);

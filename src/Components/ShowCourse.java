@@ -1,11 +1,13 @@
 package Components;
 
 import Data.DataStructures.List;
-import Data.Models.Affiliate;
 import Data.Models.Course;
+import Data.Models.User;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class ShowCourse extends JInternalFrame{
     private JButton regresarButton;
@@ -14,22 +16,29 @@ public class ShowCourse extends JInternalFrame{
     private JButton eliminarButton;
     private JButton siguienteButton;
     private JTextArea textArea1;
-    private JSpinner spinner1;
-    private JComboBox comboBox1;
+    private JSpinner durationSpinner;
+    private JComboBox selectResponsible;
     private JScrollBar scrollBar1;
     private JPanel panel1;
     private JLabel titulo;
     private JLabel sub1;
     private JLabel sub2;
     private JLabel sub3;
-
+    private JTextField levelJtf;
+    private JLabel levelJlb;
+    private long currentId = 0;
     private int currentIndex = 0;
 
     public ShowCourse(Landing landing){
+
+        ShowCourse showCourse = this;
+
         this.setSize(500, 300);
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
         this.setTitle("Consultar Cursos");
+        this.setIconifiable(true);
+        this.setResizable(true);
         this.setVisible(true);
         this.setClosable(true);
 
@@ -41,14 +50,45 @@ public class ShowCourse extends JInternalFrame{
         this.sub1.setFont(subtitle_font);
         this.sub2.setFont(subtitle_font);
         this.sub3.setFont(subtitle_font);
+        this.levelJlb.setFont((subtitle_font));
 
-//        List<Course> course = landing.Courses.show();
+
 
         Course currentCourse = null;
         try {
             currentCourse = landing.Courses.getItemAtIndex(currentIndex);
+
+            currentId = currentCourse.getId();
             // Mostrar el curso en la interfaz gráfica, por ejemplo, en un JTextArea o JLabel
             textArea1.setText(currentCourse.getDescription()); // Suponiendo que textArea1 es el área para mostrar la descripción del curso
+
+            Data.DataStructures.List<String> userNames = new List<String>();
+
+            String[] namesArray = new String[landing.Users.Count];
+
+            for (int i = 0; i < landing.Users.Count; i ++){
+                try{
+                    User user = landing.Users.getItemAtIndex(i);
+
+                    namesArray[i] = user.getUserName();
+                }
+                catch (Exception ex){
+
+                }
+
+            }
+
+            selectResponsible.setModel(new DefaultComboBoxModel<>(namesArray));
+
+            User user = landing.Users.findById(currentCourse.getIdMaestro());
+
+            selectResponsible.setSelectedItem(user.getUserName());
+
+            durationSpinner.setValue(currentCourse.getDurationInHours());
+
+            levelJtf.setText(currentCourse.getLevel());
+
+
         } catch (Exception ex) {
             ex.printStackTrace(); // Manejo de excepciones
         }
@@ -63,11 +103,20 @@ public class ShowCourse extends JInternalFrame{
                 try {
                     updatedCourse = landing.Courses.getItemAtIndex(currentIndex);
                     textArea1.setText(updatedCourse.getDescription());
+
+                    User user = landing.Users.findById(updatedCourse.getIdMaestro());
+
+                    selectResponsible.setSelectedItem(user.getUserName());
+
+                    durationSpinner.setValue(updatedCourse.getDurationInHours());
+
+                    levelJtf.setText(updatedCourse.getLevel());
+
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
             } else {
-                JOptionPane.showMessageDialog(null, "Ya estás en el último curso");
+                JOptionPane.showMessageDialog(showCourse, "Ya estás en el último curso");
             }
         });
 
@@ -80,16 +129,79 @@ public class ShowCourse extends JInternalFrame{
                 try {
                     previousCourse = landing.Courses.getItemAtIndex(currentIndex);
                     textArea1.setText(previousCourse.getDescription());
+
+                    User user = landing.Users.findById(previousCourse.getIdMaestro());
+
+                    selectResponsible.setSelectedItem(user.getUserName());
+
+                    durationSpinner.setValue(previousCourse.getDurationInHours());
+
+                    levelJtf.setText(previousCourse.getLevel());
+
                 } catch (Exception ex) {
                     ex.printStackTrace();
                 }
             } else {
                 // Estás en el primer curso, maneja esto
-                JOptionPane.showMessageDialog(null, "Ya estás en el primer curso");
+                JOptionPane.showMessageDialog(showCourse, "Ya estás en el primer curso");
             }
         });
 
 
+        regresarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                showCourse.dispose();
+            }
+        });
+        guardarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Obtener datos del formulario
+                String description = textArea1.getText();
+                int duration = (int) durationSpinner.getValue();
+                String level = levelJtf.getText();
+                String teacherUserName = selectResponsible.getSelectedItem().toString();
 
+                User user = new User();
+
+                try{
+                    user = landing.Users.findByUserName(teacherUserName);
+                }
+                catch (Exception ex){
+
+                }
+
+                long maestroId = user.getId(); // Asignar el ID del maestro deseado
+
+                Course newCourse = new Course(currentId, duration, description, maestroId, level);
+
+
+                try {
+                    landing.Courses.set(currentIndex, newCourse);
+
+                    JOptionPane.showMessageDialog(showCourse, "Curso Actualizado");
+
+                }catch (Exception ex){
+
+                }
+
+            }
+        });
+        eliminarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Course courseToDelete = landing.Courses.getItemAtIndex(currentIndex);
+
+                    landing.Courses.delete(courseToDelete);
+
+                    JOptionPane.showMessageDialog(showCourse, "Curso Eliminado");
+                }
+                catch ( Exception ex){
+
+                }
+            }
+        });
     }
 }
