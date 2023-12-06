@@ -4,9 +4,12 @@ public class Queue<T> {
     public DoubleNode<T> Beginning;
     public DoubleNode<T> End;
 
+    public int Count;
+
     public Queue(){
         Beginning = null;
         End = null;
+        Count = 0;
     }
 
     public boolean isEmpty (){
@@ -34,6 +37,7 @@ public class Queue<T> {
 
 
         }
+        Count++;
     }
     public void pop (){
         DoubleNode<T> temp = End;
@@ -50,7 +54,7 @@ public class Queue<T> {
     }
     public List<T> show (){
         List<T> list = new List<>();
-
+        Count--;
         if (isEmpty())
             return  list;
         else {

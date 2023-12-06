@@ -39,6 +39,7 @@ public class Landing extends JFrame {
     public List<Certificate> Certificates = new List<>();
 
     long AffiliateCurrentId = 0;
+    long TrainingCurrentId = 0;
 
 
     public Landing(Login loginForm, List<User> userList){
@@ -98,7 +99,7 @@ public class Landing extends JFrame {
         insertTraining.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordTraining recordTraining = new RecordTraining(landing, userList, Courses);
+                RecordTraining recordTraining = new RecordTraining(landing);
                 desktopPane.add(recordTraining);
             }
         });
