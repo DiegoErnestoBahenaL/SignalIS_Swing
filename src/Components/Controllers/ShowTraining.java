@@ -30,6 +30,7 @@ public class ShowTraining extends JInternalFrame{
     private JTextField tfCapacidad;
     private JTextArea taAlumnos;
     private JTextArea taCursos;
+    private JSpinner spinner1;
     private long currentId = 0;
     private int currentIndex = 0;
 
@@ -60,8 +61,8 @@ public class ShowTraining extends JInternalFrame{
             currentId = currentTraining.getId();
 
             tfInicio.setText(currentTraining.getStartDate());
-            tfFin.setText(currentTraining.getStartDate());
-            tfCapacidad.setText(currentTraining.getEndDate());
+            tfFin.setText(currentTraining.getEndDate());
+            spinner1.setValue(currentTraining.getCapacity());
             taAlumnos.setText(currentTraining.getStudents().toString());
             taCursos.setText(currentTraining.getCourses().toString());
             taUbicacion.setText(currentTraining.getLocation());

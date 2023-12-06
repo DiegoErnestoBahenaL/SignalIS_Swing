@@ -1,11 +1,13 @@
 package Components.Controllers;
 
+import Data.Models.Foundation;
+import Data.Models.Training;
+
 import javax.swing.*;
 import java.awt.*;
 
 public class ShowFoundation extends JInternalFrame{
     private JTextField textField1;
-    private JSpinner spinner1;
     private JButton guardarButton;
     private JButton eliminarButton;
     private JButton regresarButton;
@@ -17,10 +19,14 @@ public class ShowFoundation extends JInternalFrame{
     private JLabel sub3;
     private JLabel sub4;
     private JPanel panel1;
-    private JList list1;
-    private JList list2;
+    private JList afiliadosJlist;
+    private JList capacitacionJlist;
+    private JSpinner spinner1;
+    private JTextField textField2;
+    private long currentId = 0;
+    private int currentIndex = 0;
 
-    public ShowFoundation(){
+    public ShowFoundation(Landing landing){
         this.setSize(500, 300);
         this.setContentPane(panel1);
         this.setDefaultCloseOperation(JInternalFrame.DISPOSE_ON_CLOSE);
@@ -38,6 +44,22 @@ public class ShowFoundation extends JInternalFrame{
         this.sub3.setFont(subtitle_font);
         this.sub4.setFont(subtitle_font);
 
+        Foundation currentFoundation = null;
+        try {
+            currentFoundation = landing.Foundations.getItemAtIndex(currentIndex);
 
+            currentId = currentFoundation.getId();
+
+            textField1.setText(currentFoundation.getName());
+            spinner1.setValue(currentFoundation.getBudget());
+            afiliadosJlist.setModel(currentFoundation.getAffiliates().toArray());
+            taAlumnos.setText(currentTraining.getStudents().toString());
+            taCursos.setText(currentTraining.getCourses().toString());
+            taUbicacion.setText(currentTraining.getLocation());
+
+        } catch (Exception ex) {
+            ex.printStackTrace(); // Manejo de excepciones
+        }
+        this.setVisible(true);
     }
 }
