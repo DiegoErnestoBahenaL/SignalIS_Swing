@@ -40,6 +40,7 @@ public class Landing extends JFrame {
 
     long AffiliateCurrentId = 0;
     long TrainingCurrentId = 0;
+    long FoundationCurrentId = 0;
 
 
     public Landing(Login loginForm, List<User> userList){
@@ -67,7 +68,7 @@ public class Landing extends JFrame {
         insertFoundation.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                RecordFoundation recordFoundation = new RecordFoundation();
+                RecordFoundation recordFoundation = new RecordFoundation(landing);
                 desktopPane.add(recordFoundation);
             }
         });
